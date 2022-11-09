@@ -283,9 +283,37 @@ def min_num(x, y, z):
     else:
         print("min number is: ", z)
         return z
-git 
 
 max_num(99, 12, 43)
 min_num(99,12,43)
 '''
-#Dictionaries.
+#Dictionaries (inside curly brackets) useful to store key value pairs.
+'''
+monthConversions = {
+    "Jan": "January",
+    "Feb": "February",
+    "Mar": "March",
+    "Apr": "April",
+    "May": "May",
+    "Jun": "June",
+    "Jul": "July",
+    "Aug": "August",
+    "Sep": "September",
+    "Oct": "October",
+    "Nov": "November",
+    "Dec": "December",
+}
+
+print(monthConversions["Mar"])
+print(monthConversions.get("Mid", "not a valid key"))
+'''
+#While loops
+'''
+i = 1
+
+while i <= 10:
+    print(i)
+    i += 1
+print("Done with loop")
+
+'''
