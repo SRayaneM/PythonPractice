@@ -356,9 +356,9 @@ for row in number_grid:
 
 '''
 
-
 #Translator.
 #This function will convert each vowel in the phrase to what ever letter we want it to
+'''
 def translate(phrase):
     translation = ""
     for letter in phrase:
@@ -375,3 +375,25 @@ def translate(phrase):
 
 
 print(translate(input('Enter a phrase: ')))
+'''
+#Try and Except.
+'''
+try:
+    #value = 10 / 0
+    number = int(input("Enter a number: "))
+    print(number)
+except ZeroDivisionError as err:
+    print(err)
+
+except ValueError:
+    print("invalid Input")
+'''
+#Reading from files.
+#there are different modes in which to navigate the file.
+#the "r" mode where you can read the file.
+#the "w" mode where you can write into the file.
+#the "a" mode where you can append into the file.
+#and the "r+" mode where you can read and write on the file
+employee_sheet = open("Simple\employees.txt", "r")
+print(employee_sheet)
+employee_sheet.close()

@@ -1,0 +1,6 @@
+Made up Language
+vowels -> m
+--------------------------------
+
+dog -> dmg
+cat -> cmt
