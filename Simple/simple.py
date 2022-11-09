@@ -317,3 +317,28 @@ while i <= 10:
 print("Done with loop")
 
 '''
+#For loops.
+'''
+tasks = ["code", "workout", "make food"]
+for task in range(len(tasks)):
+    print(tasks[task])
+
+for letter in "Practice makes perfect":
+print(letter)
+'''
+#exponent function.
+'''
+print(2**3)  #this is the simple way
+#with the use of functions
+
+
+def raise_to_power(base_num, pow_num):
+    result = 1
+    for index in range(pow_num):
+        result = result * base_num
+    print(result)
+    return result
+
+
+raise_to_power(5, 2)
+'''
