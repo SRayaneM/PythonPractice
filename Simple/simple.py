@@ -64,7 +64,15 @@ while True:
     else:
         print("Invalid choice")
 """
+'''
+def cube(num):
+    return num * num * num
+
+
+print(cube(4))
+'''
 #Lists and linked lists.
+'''
 
 
 class Node:
@@ -161,6 +169,7 @@ class LinkedList:
 
 
 '''
+'''
 --------------------------------------------------------------------------------------------------------------------------------------------------------------
 llist = LinkedList()
 llist.remove_node("a")
@@ -233,3 +242,50 @@ second_node.next = third_node
 print(llist)
 --------------------------------------------------------------------------------------------------------------------------------------------------------------
 '''
+#if statements.
+'''
+
+is_male = True
+is_tall = False
+
+if is_male or is_tall:
+    print("Tall and male or both")
+else:
+    print("nor")
+
+if is_male and is_tall:
+    print("Tall and male")
+else:
+    print("neither")
+'''
+
+#if statements and comparisons.
+'''
+def max_num(x, y, z):
+    if x >= y and x >= z:
+        print("Max number is: ", x)
+        return x
+    elif y >= z and y >= x:
+        print("Max number is: ", y)
+        return y
+    else:
+        print("Max number is: ", z)
+        return z
+
+
+def min_num(x, y, z):
+    if x <= y and x <= z:
+        print("min number is: ", x)
+        return x
+    elif y <= z and y <= x:
+        print("min number is: ", y)
+        return y
+    else:
+        print("min number is: ", z)
+        return z
+git 
+
+max_num(99, 12, 43)
+min_num(99,12,43)
+'''
+#Dictionaries.
