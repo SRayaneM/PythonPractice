@@ -1,3 +1,4 @@
+import re
 #calling variables in a print function and concatinating it with other variables.
 """
 f_name, age = "Ryan", 21
@@ -395,16 +396,18 @@ except ValueError:
 #the "w" mode where you can write into the file.
 #the "a" mode where you can append into the file.
 #and the "r+" mode where you can read and write on the file
-employee_sheet = open("Simple\employees.txt", "r")
 #We can also have a count variable that will count the lines and print out the number of lines.
-#for i in employee_sheet:
-#print(i)
+'''
+employee_sheet = open("Simple\employees.txt", "r")
+for i in employee_sheet:
+    print(i)
 
 search_in = open("Simple\employees.txt", "r")
 for line in search_in:
     line = line.rstrip()
     if line.startswith('From:'):
         print(line)
+'''
 '''
 count = 0
 for line in employee_sheet:
@@ -425,3 +428,43 @@ for value in [14, 21, 45, 2, 10, 23]:
     print(smallest, value)
 print(smallest, " Is the smallest value in the array")
 '''
+
+#Matching and Extracting Data
+#re.search() returns a True/False depending on whether
+#the string matches the regular expression.
+#if we actually want the matching strings to be extracted, we use re.findall().
+#we imported the re module at the top of this file.
+'''
+x = 'My 2 favourite numbers are 22 and 7'
+y = re.findall('[0-9]+', x)
+print(y)
+'''
+#this is to find the position of the '@', the service provider, and then print out the host of the email
+'''
+data = "From ryan@genericemail.com Thu Nov 10 14:25:23 2022"
+atpos = data.find('@')
+print(atpos)
+sppos = data.find(' ', atpos)
+print(sppos)
+host = data[atpos + 1:sppos]
+print(host)
+'''
+
+#The double split pattern. (Sometimes we split a line one way, and then grab one of the pieces) ->.
+#of the line and split that piece again.
+'''
+data = "From ryan@genericemail.com Thu Nov 10 14:25:23 2022"
+words = data.split()
+email = words[1]
+pieces = email.split('@')
+print(pieces[1])
+'''
+
+#The regex version
+'''
+lin = "From ryan@genericemail.com Thu Nov 10 14:25:23 2022"
+y = re.findall('@([^ ]*)', lin)
+print(y)
+'''
+#Spam confidence
+hand
