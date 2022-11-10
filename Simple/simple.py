@@ -388,6 +388,7 @@ except ZeroDivisionError as err:
 except ValueError:
     print("invalid Input")
 '''
+#'''
 #Reading from files.
 #there are different modes in which to navigate the file.
 #the "r" mode where you can read the file.
@@ -395,5 +396,32 @@ except ValueError:
 #the "a" mode where you can append into the file.
 #and the "r+" mode where you can read and write on the file
 employee_sheet = open("Simple\employees.txt", "r")
-print(employee_sheet)
+#We can also have a count variable that will count the lines and print out the number of lines.
+#for i in employee_sheet:
+#print(i)
+
+search_in = open("Simple\employees.txt", "r")
+for line in search_in:
+    line = line.rstrip()
+    if line.startswith('From:'):
+        print(line)
+'''
+count = 0
+for line in employee_sheet:
+    count = count + 1
+    print("Line count: ", count)
 employee_sheet.close()
+'''
+#'''
+#Smallest value in an array.
+'''
+
+smallest = None
+for value in [14, 21, 45, 2, 10, 23]:
+    if smallest is None:
+        smallest = value
+    elif value < smallest:
+        smallest = value
+    print(smallest, value)
+print(smallest, " Is the smallest value in the array")
+'''
