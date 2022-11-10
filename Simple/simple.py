@@ -466,5 +466,4 @@ lin = "From ryan@genericemail.com Thu Nov 10 14:25:23 2022"
 y = re.findall('@([^ ]*)', lin)
 print(y)
 '''
-#Spam confidence
-hand
+
