@@ -51,3 +51,41 @@ print(dir(x))
 #This portion is the real operation that the object can perform
 'append', 'clear', 'copy', 'count', 'extend', 'index', 'insert', 'pop', 'remove', 'reverse', 'sort']
 '''
+#Inheritance
+'''
+When we make a new class, we can reuse an existing class and inherint all the capabilities
+of an existing class and then add new bits of data/code to create a new class.
+- Another form of store and reuse
+- Write once -> reuse many times
+- The new class (child) has all the capabilities of the old class (parent) and some more.
+'''
+
+
+class PartyAnimal:  #This is the template for making PartyAnimal objects
+    x = 0  #Each PartyAnimal object has a bit of data.
+    name = ''
+
+    def __init__(self, nam):
+        self.name = nam
+        print(self.name, "Constructed")
+
+    def party(self):  #Each partyAnimal object has a bit of code
+        self.x = self.x + 1
+        print(self.name, "Party count ", self.x)
+
+
+class FootballFan(PartyAnimal):
+    points = 0
+
+    def goalsScored(self):
+        self.points = self.points + 1
+        self.party()
+        print(self.name, "Points", self.points)
+
+
+q = PartyAnimal("Quincy")
+q.party()
+
+j = FootballFan("John")
+j.party()
+j.goalsScored()
